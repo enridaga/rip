@@ -1,6 +1,8 @@
 <?php
+// Choose here the foler where to put your action classes, default is a 'lib' folder
+/***************/
 defined('ACTIONS_HOME') or define('ACTIONS_HOME', dirname(__FILE__) . '/lib');
-if(1){
+if(0){ // If you need to debug, you can.
 	error_reporting(E_ALL);
 	ini_set('display_errors',1);
 }
