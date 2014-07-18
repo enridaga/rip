@@ -133,7 +133,11 @@ function route(){
 	$params = array_merge($_GET, $_POST, $pathParameters);
 	$actionName =  ucfirst($pathName);
 	$action = 'Action' . $actionName;	
-	try{
+	// Default action is index
+        if($action === 'Action'){
+            $action = 'ActionIndex';
+        }
+        try{
 		$exists = class_exists($action);
 	}catch(ClassNotFoundException $e){
 		error_not_found($actionName);
@@ -151,7 +155,7 @@ function route(){
 			 error_method_not_allowed($method);
 		} 
 	}else{
-		error_not_found("Not found: " . $request[0]);
+		error_not_found($request[0]);
 	}
 }
 
