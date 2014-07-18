@@ -13,4 +13,4 @@ Opinions:
  - all non implemented methods are ... guess what...
  - you can throw HTTP responses other then 200 using functions: error_malformed($msg)
  - check required parameters with $this->assertNotEmpty($param)
- - do rest in peace.
+ - do the rest in peace.
